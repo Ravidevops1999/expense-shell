@@ -43,7 +43,7 @@ VALIDATE $? "enable nodejs 20"
 dnf install nodejs -y &>>$LOG_FILE
 VALIDATE $? "installing nodejs"
 
-id expense
+id expense &>>$LOG_FILE
 if [ $? -ne 0 ]
 then
     echo -e "expense user is not present...going to $G creaete $N it"
